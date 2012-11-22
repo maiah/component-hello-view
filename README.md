@@ -1,4 +1,16 @@
-component-hello-view
-====================
 
-Sample usage of Component JS
+# hello-view
+
+  Sample Component View
+
+## Installation
+
+    $ component install maiah/hello-view
+
+## API
+
+   
+
+## License
+
+  MIT
