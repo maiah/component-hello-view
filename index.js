@@ -16,11 +16,11 @@ var p = document.querySelector('p');
 p.appendChild(personView.el);
 
 var changeName = function() {
-	if (maiah.firstName() === 'Maiah') {
-		maiah.firstName('James');
-	} else {
-		maiah.firstName('Maiah');
-	}
+  if (maiah.firstName() === 'Maiah') {
+    maiah.firstName('James');
+  } else {
+    maiah.firstName('Maiah');
+  }
 };
 
 var btn = domify('<button>Change Now</button>');
