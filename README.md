@@ -1,16 +1,4 @@
 
 # hello-view
 
-  Sample Component View
-
-## Installation
-
-    $ component install maiah/hello-view
-
-## API
-
-   
-
-## License
-
-  MIT
+  Sample usage of component-view
