@@ -16,8 +16,8 @@ var Person = model('Person')
  * The view declaration.
  */
 var PersonView = function(person) {
-	View.call(this, person, domify(personTmpl));
-	this.bind('click .changeBtn', 'changeName');
+  View.call(this, person, domify(personTmpl));
+  this.bind('click .changeBtn', 'changeName');
 };
 
 /*
@@ -30,10 +30,10 @@ PersonView.prototype.__proto__ = View.prototype;
  */
 PersonView.prototype.changeName = function() {
   if (maiah.firstName() === 'Maiah') {
-	  maiah.firstName('James');
-	} else {
-	  maiah.firstName('Maiah');
-	}
+    maiah.firstName('James');
+  } else {
+    maiah.firstName('Maiah');
+  }
 };
 
 /*
