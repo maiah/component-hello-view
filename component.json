@@ -1,5 +1,5 @@
 {
-  "name": "hello-view",
+  "name": "component-hello-view",
   "dependencies": {
     "component/model": "*",
     "component/model-timestamps": "*",
@@ -11,6 +11,6 @@
     "template.js"
   ],
   "styles": [
-    "hello-view.css"
+    "component-hello-view.css"
   ]
 }
