@@ -9,21 +9,31 @@ var Person = model('Person')
   .attr('lastName')
   .use(timestamps);
 
-var maiah = new Person({ "firstName": "Maiah", "lastName": "Macariola" });
-var personView = new View(maiah, domify(personTmpl));
-
-var p = document.querySelector('p');
-p.appendChild(personView.el);
-
 var changeName = function() {
   if (maiah.firstName() === 'Maiah') {
-    maiah.firstName('James');
-  } else {
-    maiah.firstName('Maiah');
-  }
+	  maiah.firstName('James');
+	} else {
+	  maiah.firstName('Maiah');
+	}
 };
 
-var btn = domify('<button>Change Now</button>');
-btn.addEventListener("click", changeName);
+var maiah = new Person({ "firstName": "Maiah", "lastName": "Macariola" });
 
-p.appendChild(btn);
+var PersonView = function(person) {
+	View.call(this, person, domify(personTmpl));
+	this.bind('click .changeBtn', 'changeName');
+};
+
+PersonView.prototype.__proto__ = View.prototype;
+
+PersonView.prototype.changeName = function() {
+  if (maiah.firstName() === 'Maiah') {
+	  maiah.firstName('James');
+	} else {
+	  maiah.firstName('Maiah');
+	}
+};
+
+var personView = new PersonView(maiah);
+var p = document.querySelector('p');
+p.appendChild(personView.el);
