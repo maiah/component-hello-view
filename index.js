@@ -16,7 +16,8 @@ var Person = model('Person')
  * The view declaration.
  */
 var PersonView = function(person) {
-  View.call(this, person, domify(personTmpl));
+  var el = domify(personTmpl);
+  View.call(this, person, el[0]);
   this.bind('click .changeBtn', 'changeName');
 };
 
